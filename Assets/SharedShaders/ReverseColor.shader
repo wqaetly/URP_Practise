@@ -1,4 +1,4 @@
-﻿Shader "Custom/Test"
+﻿Shader "URP_Practise/ReverseColor"
 {
     SubShader
     {
