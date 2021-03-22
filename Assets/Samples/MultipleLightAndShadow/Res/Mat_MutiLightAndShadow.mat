@@ -22,7 +22,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Mat_MutiLightAndShadow
   m_Shader: {fileID: 4800000, guid: 4612b32956fd0d24aa462fbf9dadccc6, type: 3}
-  m_ShaderKeywords: _ADD_LIGHT_OFF
+  m_ShaderKeywords: _ADD_LIGHT_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -57,7 +57,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 486bb7fc5005a0640b41cbf849e8cab9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -89,7 +89,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _ADD_LIGHT: 1
+    - _ADD_LIGHT: 0
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
