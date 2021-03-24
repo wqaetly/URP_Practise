@@ -58,7 +58,7 @@ Shader "URP_Practise/EngryBasedOnDepthMap"
             float2 texcoord:TEXCOORD;
         };
 
-        struct v2f
+        struct v2f_up
         {
             float4 positionCS:SV_POSITION;
             float2 texcoord:TEXCOORD;
@@ -86,10 +86,10 @@ Shader "URP_Practise/EngryBasedOnDepthMap"
 
             #pragma fragment FRAG
 
-            v2f VERT(a2v i)
+            v2f_up VERT(a2v i)
 
             {
-                v2f o;
+                v2f_up o;
 
                 o.positionCS = TransformObjectToHClip(i.positionOS.xyz);
 
@@ -108,7 +108,7 @@ Shader "URP_Practise/EngryBasedOnDepthMap"
                 return o;
             }
 
-            half4 FRAG(v2f i):SV_TARGET
+            half4 FRAG(v2f_up i):SV_TARGET
 
             {
                 float2 uv = i.texcoord;

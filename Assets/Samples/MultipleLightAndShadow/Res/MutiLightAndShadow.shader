@@ -36,7 +36,7 @@ Shader "URP_Practise/MutiLightAndShadow"
             float2 texcoord:TEXCOORD;
         };
 
-        struct v2f
+        struct v2f_up
         {
             float4 positionCS:SV_POSITION;
             float2 texcoord:TEXCOORD;
@@ -68,9 +68,9 @@ Shader "URP_Practise/MutiLightAndShadow"
 
             #pragma multi_compile _ _SHADOWS_SOFT
 
-            v2f VERT(a2v i)
+            v2f_up VERT(a2v i)
             {
-                v2f o;
+                v2f_up o;
                 o.positionCS = TransformObjectToHClip(i.positionOS.xyz);
                 o.texcoord = TRANSFORM_TEX(i.texcoord, _MainTex);
                 o.WS_N = normalize(TransformObjectToWorldNormal(i.normalOS.xyz));
@@ -79,7 +79,7 @@ Shader "URP_Practise/MutiLightAndShadow"
                 return o;
             }
 
-            real4 FRAG(v2f i):SV_TARGET
+            real4 FRAG(v2f_up i):SV_TARGET
             {
                 //Properties need
                 half4 shadowTexcoord = TransformWorldToShadowCoord(i.WS_P);

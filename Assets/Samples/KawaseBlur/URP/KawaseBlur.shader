@@ -1,4 +1,4 @@
-Shader "URPractise/Kawaseblur"
+Shader "URP_Practise/Kawaseblur"
 {
     Properties
     {
@@ -36,22 +36,22 @@ Shader "URPractise/Kawaseblur"
             float2 texcoord:TEXCOORD;
         };
 
-        struct v2f
+        struct v2f_up
         {
             float4 positionCS:SV_POSITION;
             float2 texcoord:TEXCOORD;
         };
 
         //这是一种写法，规范来说其实应该把他放到下面的那个Pass里
-        v2f VERT(a2v i) //水平方向的采样
+        v2f_up VERT(a2v i) //水平方向的采样
         {
-            v2f o;
+            v2f_up o;
             o.positionCS = TransformObjectToHClip(i.positionOS.xyz);
             o.texcoord = i.texcoord;
             return o;
         }
 
-        half4 FRAG(v2f i):SV_TARGET
+        half4 FRAG(v2f_up i):SV_TARGET
         {
             half4 tex = 0;
             //_MainTex_TexelSize是当前屏幕分辨率的倒数
