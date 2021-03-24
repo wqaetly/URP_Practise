@@ -53,7 +53,7 @@ Shader "URPractise/Kawaseblur"
 
         half4 FRAG(v2f i):SV_TARGET
         {
-            half4 tex = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.texcoord);
+            half4 tex = 0;
 
             tex += SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.texcoord+float2(-1,-1)*_MainTex_TexelSize.xy*_KawaseBlur);
 
@@ -63,7 +63,7 @@ Shader "URPractise/Kawaseblur"
 
             tex += SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.texcoord+float2(1,1)*_MainTex_TexelSize.xy*_KawaseBlur);
 
-            return tex / 5.0;
+            return tex * 0.25;
         }
         ENDHLSL
 
