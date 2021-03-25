@@ -53,7 +53,7 @@ Shader "URP_Practise/Kawaseblur"
 
         half4 FRAG(v2f_up i):SV_TARGET
         {
-            half4 tex = 0;
+            half4 tex = half4(0,0,0,0);
             //_MainTex_TexelSize是当前屏幕分辨率的倒数
             tex += SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.texcoord+float2(-1,-1)*_MainTex_TexelSize.xy*_KawaseBlur);
 
