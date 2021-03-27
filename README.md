@@ -20,6 +20,9 @@ URP个人练习项目，参考多处文章和博客，部分效果可能由于�
 ### [径向模糊](https://github.com/wqaetly/URP_Practise/tree/main/Assets/Samples/RadialBlur)
 ![](./SamplePngs/RadialBlur.png)
 
+### [扫描效果](https://github.com/wqaetly/URP_Practise/tree/main/Assets/Samples/Scan)
+![](./SamplePngs/Scan.gif)
+
 ### [基于后处理的热空气扭曲效果](https://github.com/wqaetly/URP_Practise/tree/main/Assets/Samples/Air-distortion)
 ![](./SamplePngs/Air.gif!webp)
 
@@ -32,3 +35,4 @@ URP个人练习项目，参考多处文章和博客，部分效果可能由于�
  - [B站天守魂座_雪风: urp管线的自学hlsl之路](https://www.bilibili.com/read/cv6382907)
  - [高品质后处理：十种图像模糊算法的总结与实现](https://zhuanlan.zhihu.com/p/125744132)
  - [高品质后处理：十种故障艺术(Glitch Art)算法的总结与实现](https://zhuanlan.zhihu.com/p/148256756)
+ - [Unity实现地图扫描效果](https://zhuanlan.zhihu.com/p/143788955)
