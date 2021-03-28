@@ -180,6 +180,7 @@ Shader "URP_Practise/Outline"
                 real4 soild = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.texcoord[0].xy);
                 real4 color;
 
+                //用Blur的图减去纯色图，掏空它，由于Blur本身就自带了UV偏移效果，所以描边效果就有了
                 #ifdef _INCOLORON
 
                 color = abs(blur - soild) + sour;

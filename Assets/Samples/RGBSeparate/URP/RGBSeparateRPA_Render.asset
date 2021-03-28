@@ -1,5 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4387258602453349250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aff685d19471cff4299a26258ef898d1, type: 3}
+  m_Name: RGBSeparateRenderFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  mysetting:
+    mat: {fileID: 0}
+    Instensity: 0.5
+    passEvent: 300
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10,11 +27,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de640fe3d0db1804a85f9fc8f5cadab6, type: 3}
-  m_Name: OutlineRPA_Render
+  m_Name: RGBSeparateRPA_Render
   m_EditorClassIdentifier: 
   m_RendererFeatures:
-  - {fileID: 2926524115602171450}
-  m_RendererFeatureMap: 3ae614812d1a9d28
+  - {fileID: -4387258602453349250}
+  m_RendererFeatureMap: 7eccfdb68b531dc3
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
   shaders:
@@ -44,31 +61,6 @@ MonoBehaviour:
   m_ShadowTransparentReceive: 1
   m_RenderingMode: 0
   m_AccurateGbufferNormals: 0
---- !u!114 &2926524115602171450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 806366bce651fb840a37628757ca2f54, type: 3}
-  m_Name: OutlineRenderFeature
-  m_EditorClassIdentifier: 
-  m_Active: 1
-  mysetting:
-    mymat: {fileID: 2100000, guid: 70b10f7e5522f154c9f776989765a15d, type: 2}
-    color: {r: 0, g: 0, b: 1, a: 1}
-    QueueMin: 2000
-    QueueMax: 2500
-    layer:
-      serializedVersion: 2
-      m_Bits: 512
-    passEvent: 400
-    blur: 1
-    passloop: 3
-    ColorType: 1
 --- !u!114 &6257942879796355212
 MonoBehaviour:
   m_ObjectHideFlags: 0
