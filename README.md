@@ -23,6 +23,9 @@ URP个人练习项目，参考多处文章和博客，部分效果可能由于�
 ### [扫描效果](https://github.com/wqaetly/URP_Practise/tree/main/Assets/Samples/Scan)
 ![](./SamplePngs/Scan.gif)
 
+### [描边效果](https://github.com/wqaetly/URP_Practise/tree/main/Assets/Samples/Outline)
+![](./SamplePngs/Outline.png)
+
 ### [基于后处理的热空气扭曲效果](https://github.com/wqaetly/URP_Practise/tree/main/Assets/Samples/Air-distortion)
 ![](./SamplePngs/Air.gif!webp)
 
