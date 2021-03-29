@@ -1,0 +1,29 @@
+// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel CSMain
+
+// Create a RenderTexture with enableRandomWrite flag and set it
+// with cs.SetTexture
+RWTexture2D<float4> _Result;
+
+//可读不可写
+Texture2D<float4> _Sour;
+
+float _Bright;
+
+float _Saturate;
+
+float _Constrast;
+
+[numthreads(8, 8, 1)] //一个线程组的中线程的布局与数量设定
+void CSMain(uint3 id : SV_DispatchThreadID)
+{
+    _Result[id.xy] = _Sour[id.xy];
+
+    _Result[id.xy] *= _Bright; //计算明度
+
+    float gray = _Result[id.xy].x * 0.21 + _Result[id.xy].y * 0.71 + _Result[id.xy].z * 0.08; //计算灰度
+
+    _Result[id.xy] = lerp(float4(gray, gray, gray, 1), _Result[id.xy], _Saturate); //饱和度
+
+    _Result[id.xy] = lerp(float4(0.5, 0.5, 0.5, 1), _Result[id.xy], _Constrast); //计算对比度
+}
