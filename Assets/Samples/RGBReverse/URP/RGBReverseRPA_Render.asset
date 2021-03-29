@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Active: 1
   mysetting:
     mat: {fileID: 2100000, guid: 0a75cc295d7c88d45a2213b75d5d9a3f, type: 2}
-    passEvent: 300
+    passEvent: 500
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0

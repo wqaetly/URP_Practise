@@ -258,6 +258,15 @@
         "com.unity.modules.imgui": "1.0.0"
       }
     },
+    "com.unity.visualeffectgraph": {
+      "version": "10.3.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.shadergraph": "10.3.2"
+      },
+      "url": "https://packages.unity.cn"
+    },
     "nuget.mono-cecil": {
       "version": "0.1.6-preview",
       "depth": 2,
