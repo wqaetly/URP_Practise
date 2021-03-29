@@ -32,6 +32,9 @@ URP个人练习项目，参考多处文章和博客，部分效果可能由于�
 ### [颜色分离效果](https://github.com/wqaetly/URP_Practise/tree/main/Assets/Samples/RGBSeparate)
 ![](./SamplePngs/RGBSeparate.png)
 
+### [线段与方块VFX](https://github.com/wqaetly/URP_Practise/tree/main/Assets/Samples/VFX/LineAndCube)
+![](./SamplePngs/LineAndCube.gif)
+
 ### [基于后处理的热空气扭曲效果](https://github.com/wqaetly/URP_Practise/tree/main/Assets/Samples/Air-distortion)
 ![](./SamplePngs/Air.gif!webp)
 
