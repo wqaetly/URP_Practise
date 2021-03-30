@@ -19,8 +19,9 @@
 
             float4 _MainTex_TexelSize;
 
-            CBUFFER_END
 
+            CBUFFER_END
+            float _Angle;
             TEXTURE2D(_MainTex);
             SAMPLER(sampler_MainTex);
 
@@ -40,9 +41,11 @@
             {
                 Varyings output;
 
-                output.vertex  = TransformObjectToHClip(input.positionOS.xyz);
-                output.uv = input.uv;
-
+                output.vertex = TransformObjectToHClip(input.positionOS.xyz);
+                //output.uv = input.uv;
+                output.uv.x = input.uv.x * cos(_Angle) - input.uv.y*sin(_Angle);
+                output.uv.y = input.uv.x*sin(_Angle) + input.uv.y *cos(_Angle);
+                //output.uv = float2(input.uv.x * cos(_Angle) - input.uv.y*sin(_Angle), input.uv.x*sin(_Angle) + input.uv.y *cos(_Angle));
                 return output;
             }
 

@@ -35,6 +35,9 @@ URP个人练习项目，参考多处文章和博客，部分效果可能由于�
 ### [线段与方块VFX](https://github.com/wqaetly/URP_Practise/tree/main/Assets/Samples/VFX/LineAndCube)
 ![](./SamplePngs/LineAndCube.gif)
 
+### [GPU粒子](https://github.com/wqaetly/URP_Practise/tree/main/Assets/Samples/GPUParticles)
+![](./SamplePngs/GPUParticles.gif)
+
 ### [利用Compute Shader实现的屏幕后处理](https://github.com/wqaetly/URP_Practise/tree/main/Assets/Samples/ComputePostProcess)
 ![](./SamplePngs/ComputePostProcess.png)
 

@@ -1,0 +1,27 @@
+#pragma kernel ComputeParticle
+
+float time;
+
+float4 mycolor;
+
+float size;
+
+struct particleData
+{
+    float3 position;
+    float4 color;
+};
+
+RWStructuredBuffer<particleData> outputData;
+
+[numthreads(4, 8, 12)]
+void ComputeParticle(uint3 id : SV_DispatchThreadID)
+{
+    int Dispatchindex = id.x + (id.y * 5 * 4) + (id.z * 5 * 10 * 4 * 8);
+    particleData thisParticle = outputData[Dispatchindex];
+    thisParticle.position = float3(size * sin(Dispatchindex + time), Dispatchindex * 0.002,
+                                   size * cos(Dispatchindex + time));
+    thisParticle.position.xz *= abs(sin(thisParticle.position.y + time * 0.3));
+    thisParticle.color.xyz = mycolor;
+    outputData[Dispatchindex] = thisParticle;
+}
