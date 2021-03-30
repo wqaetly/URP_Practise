@@ -41,6 +41,9 @@ URP个人练习项目，参考多处文章和博客，部分效果可能由于�
 ### [利用Compute Shader实现的屏幕后处理](https://github.com/wqaetly/URP_Practise/tree/main/Assets/Samples/ComputePostProcess)
 ![](./SamplePngs/ComputePostProcess.png)
 
+### [一种更好的广告牌实现](https://github.com/wqaetly/URP_Practise/tree/main/Assets/Samples/Billboard)
+![](./SamplePngs/Billboard.gif)
+
 ### [基于后处理的热空气扭曲效果](https://github.com/wqaetly/URP_Practise/tree/main/Assets/Samples/Air-distortion)
 ![](./SamplePngs/Air.gif!webp)
 
